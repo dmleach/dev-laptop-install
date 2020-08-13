@@ -48,6 +48,9 @@ cp ./apache_template.conf ./$virtual_host_name.conf
 ## Update the value of the IP address in the temp file
 sed -i "s/~IP_ADDRESS~/$virtual_host_ip_address/" $virtual_host_name.conf;
 
+## Update the value of the virtual host name in the temp file
+sed -i "s/~SERVER_NAME~/$virtual_host_name/" $virtual_host_name.conf;
+
 # Create the document root directory in /var/www if needed
 declare virtual_host_document_root_path="/var/www/$virtual_host_name";
 
