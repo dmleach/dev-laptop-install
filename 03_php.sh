@@ -35,6 +35,9 @@ apt update -q;
 declare package_name="php$version_to_install";
 install $package_name;
 
+# Install the Apache php module
+sudo apt install libapache2-mod-php
+
 # Install Composer if needed
 install composer;
 
